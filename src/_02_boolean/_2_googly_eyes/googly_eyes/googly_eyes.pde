@@ -7,6 +7,9 @@ face.resize(800,600);
 }
 
 void draw() {
+  int x = mouseX;
+  int y = mouseY;
+  
   background(face);
   fill(255,255,255);
   ellipse(365,150,40,40);
@@ -18,17 +21,30 @@ void draw() {
   fill(0,0,0);
  
   
-  if( mouseX >  365 + 40/2 || mouseX<  365 - 40/2){
-     ellipse(365,150,15,15);
-     ellipse(365+47,150+25,15,15);
+  if( mouseX >  378){
+     x = 378;
    
-  } else{
-    ellipse(mouseX,mouseY,15,15);
-     ellipse(mouseX+47,mouseY+25,15,15);
+  } 
+  if( mouseX <  352){
+    x = 352;
+    
   }
+  
+  if(mouseY > 160 ){
+   y = 160;
+  
+  } 
+  if(mouseY < 140){
+    y = 140;
+    
+  }
+  
+  ellipse(x,y,15,15);
+  ellipse(x+47,y+25,15,15);
   
   
   
 
   
+
 }
