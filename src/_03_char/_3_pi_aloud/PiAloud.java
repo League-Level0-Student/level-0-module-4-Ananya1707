@@ -28,10 +28,18 @@ public class PiAloud {
 
 	// [CHALLENGE]
 	// *6. Get a character from the user using the getInputFromUser() method
-		System.out.println("Out of the first 20 digits of Pi which digit of Pi would you like to know?");
+		System.out.println();
+		System.out.println("What is the 5th digit of Pi?");
 		int number = getInputFromUser();
 		
 	// *7. Compare the users' char to the next digit of Pi
+		if(pi.charAt(6)== number){
+			System.out.println("correct");
+		}
+		
+		else {
+			System.out.println("incorrect");
+		}
 	// *8. If they are correct, print out "correct". If they are not, print "incorrect" 
 	}
 	
